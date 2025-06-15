@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pet Care - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐾 Digital Pet Care 🐾</h1>
+            <p class="subtitle">Take care of your virtual companion!</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Pet Shop</a>
+        </nav>
+
+        <div class="pet-container">
+            <div class="name-input">
+                <input type="text" id="petNameInput" placeholder="Enter your pet's name" oninput="updatePetNameLive()">
+                <button onclick="setPetName()">Set Name</button>
+            </div>
+            
+            <h2 id="petNameDisplay">Your Pet</h2>
+            <div class="pet-display" id="petEmoji" onclick="petInteraction()">🐱</div>
+            
+            <div class="mood-display" id="moodDisplay">
+                Mood: Happy 😊
+            </div>
+
+            <div class="pet-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="happinessValue">100</div>
+                    <div>Happiness</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="hungerValue">50</div>
+                    <div>Hunger</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="energyValue">75</div>
+                    <div>Energy</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" onclick="feedPet()">🍎 Feed</button>
+                <button class="control-btn" onclick="playWithPet()">🎾 Play</button>
+                <button class="control-btn" onclick="restPet()">😴 Rest</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
