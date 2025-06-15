@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pet Care - Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛍️ Pet Shop 🛍️</h1>
+            <p class="subtitle">Buy accessories and treats for your pet!</p>
+        </header>
+
+        <nav>
+            <a href="index.html">← Back to Home</a>
+            <a href="shop.html" class="active">Pet Shop</a>
+        </nav>
+
+        <div class="shop-container">
+            <h2>Welcome to the Pet Shop!</h2>
+            
+            <div class="currency-display">
+                💰 Coins: <span id="coinCount">100</span>
+            </div>
+
+            <div class="color-picker">
+                <h3>🎨 Pet Color Customizer</h3>
+                <p>Pick a color for your pet's background:</p>
+                <input type="color" id="colorPicker" value="#ff6b6b" onchange="changePetColor()">
+                <div class="pet-preview" id="petPreview">🐱</div>
+            </div>
+
+            <div class="shop-items">
+                <div class="shop-item">
+                    <div class="item-icon">🎾</div>
+                    <h4>Super Ball</h4>
+                    <p>+20 Happiness when playing</p>
+                    <p class="price">Cost: 30 coins</p>
+                    <button class="control-btn" onclick="buyItem('ball', 30)">Buy Now</button>
+                </div>
+
+                <div class="shop-item">
+                    <div class="item-icon">🍖</div>
+                    <h4>Premium Food</h4>
+                    <p>-40 Hunger, +15 Happiness</p>
+                    <p class="price">Cost: 25 coins</p>
+                    <button class="control-btn" onclick="buyItem('food', 25)">Buy Now</button>
+                </div>
+
+                <div class="shop-item">
+                    <div class="item-icon">🛏️</div>
+                    <h4>Luxury Bed</h4>
+                    <p>+50 Energy when resting</p>
+                    <p class="price">Cost: 50 coins</p>
+                    <button class="control-btn" onclick="buyItem('bed', 50)">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="mini-game">
+                <h3>🎯 Coin Collector Mini-Game</h3>
+                <p>Click the button as fast as you can to earn coins!</p>
+                <button id="coinButton" onclick="collectCoin()">💰</button>
+                <p>Clicks remaining: <span id="clicksLeft">10</span></p>
+                <button onclick="resetMiniGame()" class="control-btn reset-btn">Reset Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
